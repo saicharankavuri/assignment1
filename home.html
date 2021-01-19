@@ -1,0 +1,330 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+var abc=1;
+function edit_row(no)
+{
+ if(abc==1)
+ {
+ document.getElementById("edit_button"+no).value="Save";
+ 
+	
+ var did=document.getElementById("did"+no);
+ var cid=document.getElementById("cid"+no);
+ var dname=document.getElementById("dname"+no);
+ var due=document.getElementById("due"+no);
+ var idate=document.getElementById("idate"+no);
+ var edate=document.getElementById("edate"+no);
+ var status=document.getElementById("status"+no);
+ 
+	
+ var did_data=did.innerHTML;
+ var cid_data=cid.innerHTML;
+ var dname_data=dname.innerHTML;
+ var due_data=due.innerHTML;
+ var idate_data=idate.innerHTML;
+ var edate_data=edate.innerHTML;
+ var status_data=status.innerHTML;
+	
+ did.innerHTML="<input type='text' id='did_text"+no+"' value='"+did_data+"'>";
+ cid.innerHTML="<input type='text' id='cid_text"+no+"' value='"+cid_data+"'>";
+ dname.innerHTML="<input type='text' id='dname_text"+no+"' value='"+dname_data+"'>";
+ due.innerHTML="<input type='text' id='due_text"+no+"' value='"+due_data+"'>";
+ idate.innerHTML="<input type='text' id='idate_text"+no+"' value='"+idate_data+"'>";
+ edate.innerHTML="<input type='text' id='edate_text"+no+"' value='"+edate_data+"'>";
+ status.innerHTML="<input type='text' id='status_text"+no+"' value='"+status_data+"'>";
+ abc=2;
+ }
+ else
+ {
+ 	var did_val=document.getElementById("did_text"+no).value;
+ var cid_val=document.getElementById("cid_text"+no).value;
+ var dname_val=document.getElementById("dname_text"+no).value;
+  var due_val=document.getElementById("due_text"+no).value;
+  var idate_val=document.getElementById("idate_text"+no).value;
+   var edate_val=document.getElementById("edate_text"+no).value;
+  var status_val=document.getElementById("status_text"+no).value;
+
+
+ document.getElementById("did"+no).innerHTML=did_val;
+ document.getElementById("cid"+no).innerHTML=cid_val;
+ document.getElementById("dname"+no).innerHTML=dname_val;
+  document.getElementById("due"+no).innerHTML=due_val;
+  document.getElementById("idate"+no).innerHTML=idate_val;
+  document.getElementById("edate"+no).innerHTML=edate_val;
+  document.getElementById("status"+no).innerHTML=status_val;
+
+ document.getElementById("edit_button"+no).value="Edit";
+
+ abc=1;
+ }
+}
+
+
+
+function delete_row(no)
+{
+ document.getElementById("row"+no+"").outerHTML="";
+}
+
+
+</script>
+<style>
+	table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Dashboard</a>
+  <a href="#">Person</a>
+  <a href="#">Courts</a>
+  <a href="#">Citations</a>
+  <a href="#">Violations</a>
+  <a href="#">Documents</a>
+  <a href="#">Banking</a>
+  <a href="#">E-Hearing</a>
+  <a href="#">Payments</a>
+  <a href="#">Money</a>
+  <a href="#">Facilities</a>
+  <a href="#">Garnishment</a>
+  <a href="#">Citations</a>
+  <a href="#">Citations</a>
+  <a href="#">Citations</a>
+  
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for DocumentId.." title="Type in a name">
+
+
+<div id="wrapper">
+<table id="myTable" >
+<tr>
+<th>DocumentID</th>
+<th>CodeID</th>
+<th>Debtor Name</th>
+<th>Total Due</th>
+<th>Issued Date</th>
+<th>End Date</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+
+<tr id="row1">
+<td id="did1"><a href="#">CR-10-Grpa-012</a></td>
+<td id="cid1">LH-001-08</td>
+<td id="dname1"><a href="#">State vs Sayer</a></td>
+<td id="due1">0.00</td>
+<td id="idate1">10-01-2021</td>
+<td id="edate1">20-01-2021</td>
+<td id="status1">Active</td>
+<td>
+<input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+
+<button class="btn" onclick="delete_row('1')"><i class="fa fa-trash"></i></button>
+</td>
+</tr>
+
+<tr id="row2">
+<td id="did2"><a href="#">CR-10-Grpa-013</a></td>
+<td id="cid2">LH-001-08</td>
+<td id="dname2"><a href="#">State vs Sayer</a></td>
+<td id="due2">0.00</td>
+<td id="idate2">10-01-2021</td>
+<td id="edate2">20-01-2021</td>
+<td id="status2">Active</td>
+<td>
+<input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+
+<button class="btn" onclick="delete_row('2')"><i class="fa fa-trash"></i></button>
+</td>
+</tr>
+
+<tr id="row3">
+<td id="did3"><a href="#">CR-10-Grpa-014</a></td>
+<td id="cid3">LH-001-08</td>
+<td id="dname3"><a href="#">State vs Sayer</a></td>
+<td id="due3">0.00</td>
+<td id="idate3">10-01-2021</td>
+<td id="edate3">20-01-2021</td>
+<td id="status3">Active</td>
+<td>
+<input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+<button class="btn" onclick="delete_row('3')"><i class="fa fa-trash"></i></button>
+
+</td>
+</tr>
+
+<tr id="row4">
+<td id="did4"><a href="#">CR-10-Grpa-015</a></td>
+<td id="cid4">LH-001-08</td>
+<td id="dname4"><a href="#">State vs Sayer</a></td>
+<td id="due4">0.00</td>
+<td id="idate4">10-01-2021</td>
+<td id="edate4">20-01-2021</td>
+<td id="status4">Active</td>
+<td>
+<input type="button" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
+<button class="btn" onclick="delete_row('4')"><i class="fa fa-trash"></i></button>
+
+</td>
+</tr>
+
+<tr id="row5">
+<td id="did5"><a href="#">CR-10-Grpa-016</a></td>
+<td id="cid5">LH-001-08</td>
+<td id="dname5"><a href="#">State vs Sayer</a></td>
+<td id="due5">0.00</td>
+<td id="idate5">10-01-2021</td>
+<td id="edate5">20-01-2021</td>
+<td id="status5">Active</td>
+<td>
+<input type="button" id="edit_button5" value="Edit" class="edit" onclick="edit_row('5')">
+<button class="btn" onclick="delete_row('5')"><i class="fa fa-trash"></i></button>
+
+</td>
+</tr>
+
+<tr id="row6">
+<td id="did6"><a href="#">CR-10-Grpa-017</a></td>
+<td id="cid6">LH-001-08</td>
+<td id="dname6"><a href="#">State vs Sayer</a></td>
+<td id="due6">0.00</td>
+<td id="idate6">10-01-2021</td>
+<td id="edate6">20-01-2021</td>
+<td id="status6">Active</td>
+<td>
+<input type="button" id="edit_button6" value="Edit" class="edit" onclick="edit_row('6')">
+<button class="btn" onclick="delete_row('6')"><i class="fa fa-trash"></i></button>
+
+</td>
+</tr>
+
+<tr id="row7">
+<td id="did7"><a href="#">CR-10-Grpa-018</a></td>
+<td id="cid7">LH-001-08</td>
+<td id="dname7"><a href="#">State vs Sayer</a></td>
+<td id="due7">0.00</td>
+<td id="idate7">10-01-2021</td>
+<td id="edate7">20-01-2021</td>
+<td id="status7">Active</td>
+<td>
+<input type="button" id="edit_button7" value="Edit" class="edit" onclick="edit_row('7')">
+<button class="btn" onclick="delete_row('7')"><i class="fa fa-trash"></i></button>
+
+</td>
+</tr>
+
+
+
+
+
+</table>
+</div>
+
+</body>
+</html>
