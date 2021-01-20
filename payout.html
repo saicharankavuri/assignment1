@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/style.css">
+
+	<title></title>
+
+	
+</head>
+<body>
+	
+	<div id="payOut">
+		<div tabindex="0">
+			<h2>Pay Out - Garishment Payments</h2>
+
+			<p>Select Garishment&#47;Executiion</p>
+		</div>
+		<hr>
+
+		<div>
+			<p>Search By Keyword</p>
+
+			<select class="filterBy">
+				<option value="all">All</option>
+				<option value="doctID">Document ID</option>
+				<option value="debtor">Debtor</option>
+				<option value="issuedOn">Issued On</option>
+				<option value="totalDue">Total Due</option>
+				<option value="amtOnDeposit">Amount On Deposit</option>
+				<option value="curstat">current</option>
+
+			</select>
+			<input class="search" type="search" placeholder="Type here" size="30">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<button class="btn" type="submit">Search</button>
+		</div>
+
+		<div>
+			<table border=1 frame=void rules=rows>
+				<thead>
+					<tr>
+						<th><input type="checkbox" disabled></th>
+						<th>Document ID</th>
+						<th>Debtor</th>
+						<th>Issued On</th>
+						<th>Total Due</th>
+						<th>Amount on Deposit</th>
+						<th>Current Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" id="checkPay"></td>
+						<td>12-GARN-038</td>
+						<td>Thomas Sawyer</td>
+						<td>20-08-2020 10:20 AM</td>
+						<td>0.00</td>
+						<td>0.00</td>
+						<td>Issued</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="checkPay" onclick="onCheck()"></td>
+						<td>12-GARN-038</td>
+						<td>John Doe</td>
+						<td>21-09-2020 10:20 AM</td>
+						<td>0.00</td>
+						<td>0.00</td>
+						<td>Issued</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="checkPay"></td>
+						<td>12-GARN-038</td>
+						<td>Judge</td>
+						<td>21-09-2020 10:20 AM</td>
+						<td>0.00</td>
+						<td>0.00</td>
+						<td>Not Issued</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="payOutDetails" style="display: contents;">
+
+		<form action="">
+			<div>
+				
+					<h3>Details</h3>
+					<hr>
+				<div style="margin: 0; padding: 0;">
+					<label for="">Document ID</label>
+					<label for="" id="caseId">Case ID</label>
+					<label for="" id="caseName">Case Name</label>
+					<div>			
+						<input type="search" size="20" value="12-GARN-038">
+						<input type="search" size="20" value="LH-001-08">
+						<input type="search" size="20" placeholder="">
+					</div>
+				</div>
+
+				<div style="margin: 0; padding: 0;">
+					<label for="">Status</label>
+					<label for="" id="totDue">Total Due</label>
+					<label for="" id="balDue">Balance Due</label>
+					<div>			
+						<input type="text" size="20" value="Interrogatories Field">
+						<input type="text" size="20" value="1,000">
+						<input type="text" value="1,000" size="20">
+					</div>
+				</div>
+
+			</div>
+			<div style="float: right">
+				<button type="submit" class="cancel">Cancel</button>
+				<button type="submit" class="save">Save</button>
+			</div>
+		</form>
+
+			<form action="">
+				
+			</form>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	var payOutChecked = function(){
+
+		let n = $("input:checked").length;
+	if(n == 1){
+		$("#payOutDetails").toggle();
+		}
+	};
+	
+	payOutChecked();
+	$("input[type=checkbox]" ).on( "click", payOutChecked);
+	</script>
+</body>
+</html>

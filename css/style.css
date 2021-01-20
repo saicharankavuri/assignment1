@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+table {
+	border-collapse: collapse;
+}
+table,
+td {
+    border: 1px solid white;
+    padding:0 15px 0 15px;
+}
+
+.searchby {
+    text-align: left;
+}
+
+.keyword {
+    text-align: right;
+}
+
+thead,
+th {
+    font-weight: bold;
+    padding:0 15px 0 15px;
+
+}
+
+td:nth-child(2n+1), td:nth-child(2n) {
+ border-bottom: solid 0.01em #DFDBDB;
+}
+.status {
+    font-weight: bold;
+    background-color: #0A71D83B;
+}
+
+a {
+    text-decoration: underline;
+}
+
+thead {
+
+    background-color: #E8E8E8;
+}
+.search {
+	margin: .4rem 0;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.3rem solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .15rem;
+    background-color: #202340;
+}
+.save {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.09rem solid #202340;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .15rem;
+    background-color: #202340;
+}
+
+.cancel {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    color: #202340;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.09rem solid #202340;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .15rem;
+    background-color: white;
+}
+
+#caseId {
+    margin-left: 80px;
+}
+
+ #totDue {
+    margin-left: 116px;
+}
+#caseName {
+    margin-left: 100px;
+}
+#balDue  {
+    margin-left: 102px;
+}
+#accName {
+    margin-left: 86px;
+}
+#payName {
+    margin-left: 106px;
+}
