@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Dashboard</a>
+  <a href="#">Person</a>
+  <a href="#">Courts</a>
+  <a href="#">Citations</a>
+  <a href="#">Violations</a>
+  <a href="#">Documents</a>
+  <a href="#">Banking</a>
+  <a href="#">E-Hearing</a>
+  <a href="#">Payments</a>
+  <a href="#">Money</a>
+  <a href="#">Facilities</a>
+  <a href="#">Garnishment</a>
+  <a href="#">Citations</a>
+  <a href="#">Citations</a>
+  <a href="#">Citations</a>
+  
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<h4><a href="#">Home</a>><a href="#">Garnishment</a>>New Garnishment</h4>
+
+<button type="button" class="collapsible">Details</button>
+<div class="content">
+  
+    <input type="text" id="did" name="did" placeholder="Document ID..">
+
+    
+    <input type="text" id="cid" name="cid" placeholder="Case ID..">
+
+    
+    <select id="dtype" name="dtype">
+      <option value="Garnishment">Garnishment</option>
+      <option value="Others">Others</option>
+      
+    </select>
+    
+    <input type="text" id="cname" name="cname" value="State vs Sayer">
+    <input type="text" id="due" name="due" placeholder="Total Due..">
+    <br>
+    <label for="issuedate">Issued date:</label>
+     <input type="datetime-local" id="issuedate" name="issuedate">
+     <label for="enddate">End date:</label>
+      <input type="datetime-local" id="enddate" name="enddate">
+      <input type="submit" value="Save">
+</div>
+<button type="button" class="collapsible">Person Details 1</button>
+<div class="content">
+  	 <input type="text" id="debtname" name="debtname" placeholder="Debtor Name..">    
+    <input type="text" id="debtadd" name="debtadd" placeholder="Debtor Address">
+    <input type="text" id="garname" name="garname" placeholder="Garnishee Name..">    
+    <input type="text" id="garnadd" name="garnadd" placeholder="Garnishee Address">
+     <input type="text" id="reqname" name="reqname" placeholder="Requestor Name..">    
+    <input type="text" id="reqadd" name="reqnadd" placeholder="Requestor Address">
+     <input type="text" id="attorname" name="attorname" placeholder="Attorney Name..">    
+    <input type="text" id="attoradd" name="attoradd" placeholder="Attorney Address">
+    <input type="submit" value="Save">
+</div>
+<button type="button" class="collapsible">Person Details 2</button>
+<div class="content">
+	<h4>Process layouts to:</h4>
+  <input type="radio" id="requestor" name="requestor" value="requestor">
+  <label for="requestor">Requestor</label><br>
+  <input type="radio" id="attorney" name="attorney" value="attorney">
+  <label for="attorney">Attorney</label><br>
+  <input type="text" id="ractions" name="ractions" placeholder="Register of Actions..">  
+  <input type="text" id="sinst" name="sinst" placeholder="Service Instructions..">  
+  <br>
+  <label for="layoutdate">Layout Passout on:</label>
+  
+      <input type="datetime-local" id="layoutdate" name="layoutdate">
+   <input type="text" id="ifield" name="ifield" placeholder="Interrogatories Field">
+   <input type="text" id="efield" name="efield" placeholder="Exemptions Field">
+   <input type="submit" value="Save">
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+
+
+</body>
+</html>
