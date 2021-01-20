@@ -178,6 +178,49 @@ top: 190px;
 
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 </head>
 <body>
@@ -204,7 +247,7 @@ top: 190px;
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 <h4><a href="#">Home</a>>Garnishment</h4>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for DocumentId.." title="Type in a name">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for DocumentId.." >
 
 <h2 style="text-align:left;">All Garnishment</h2>
 <div class="ngarn">
@@ -237,6 +280,16 @@ top: 190px;
 <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
 
 <button class="btn" onclick="delete_row('1')"><i class="fa fa-trash"></i></button>
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </td>
 </tr>
 
@@ -252,6 +305,16 @@ top: 190px;
 <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
 
 <button class="btn" onclick="delete_row('2')"><i class="fa fa-trash"></i></button>
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </td>
 </tr>
 
@@ -266,7 +329,16 @@ top: 190px;
 <td>
 <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
 <button class="btn" onclick="delete_row('3')"><i class="fa fa-trash"></i></button>
-
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </td>
 </tr>
 
@@ -281,7 +353,16 @@ top: 190px;
 <td>
 <input type="button" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
 <button class="btn" onclick="delete_row('4')"><i class="fa fa-trash"></i></button>
-
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </td>
 </tr>
 
@@ -296,7 +377,16 @@ top: 190px;
 <td>
 <input type="button" id="edit_button5" value="Edit" class="edit" onclick="edit_row('5')">
 <button class="btn" onclick="delete_row('5')"><i class="fa fa-trash"></i></button>
-
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </td>
 </tr>
 
@@ -311,7 +401,16 @@ top: 190px;
 <td>
 <input type="button" id="edit_button6" value="Edit" class="edit" onclick="edit_row('6')">
 <button class="btn" onclick="delete_row('6')"><i class="fa fa-trash"></i></button>
-
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </td>
 </tr>
 
@@ -326,6 +425,16 @@ top: 190px;
 <td>
 <input type="button" id="edit_button7" value="Edit" class="edit" onclick="edit_row('7')">
 <button class="btn" onclick="delete_row('7')"><i class="fa fa-trash"></i></button>
+<div class="dropdown">
+    <button class="dropbtn">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 
 </td>
 </tr>
