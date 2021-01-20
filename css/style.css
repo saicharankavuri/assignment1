@@ -7,7 +7,7 @@ table {
 table,
 td {
     border: 1px solid white;
-    padding:0 15px 0 15px;
+    padding: 4px 15px 4px 15px;
 }
 
 .searchby {
@@ -21,34 +21,95 @@ td {
 thead,
 th {
     font-weight: bold;
-    padding:0 15px 0 15px;
+    padding: 4px 15px 4px 15px;
 
 }
 
-td:nth-child(2n+1), td:nth-child(2n) {
+.table-payin td:nth-child(2n+1), .table-payin td:nth-child(2n) {
  border-bottom: solid 0.01em #DFDBDB;
 }
+
+.table-payout td:nth-child(2n+1), .table-payout td:nth-child(2n) {
+ border-bottom: solid 0.01em #DFDBDB;
+}
+
 .status {
     font-weight: bold;
     background-color: #0A71D83B;
+}
+/*
+------------------------------------------------------------------------------------------------------------------
+                    Account Transactions
+--- -------------------------------------------------------------------
+ */
+div.accGarnish {
+    background-color: #FFFFFF;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
 }
 
 a {
     text-decoration: underline;
 }
 
-thead {
-
-    background-color: #E8E8E8;
+a.active {
+    color: blue;
+    text-decoration: none;
 }
-.search {
-	margin: .4rem 0;
+.table-act{
+    background-color: #F6F6F6;
 }
 
+.info-act .table-act th{
+    color: #949090;
+}
+.table-act td{
+    color: #333333;
+}
+.table-act td:nth-child(2n+1) td:nth-child(2n){
+  border-bottom: none;  
+}
 
-.btn {
+.t-record i{
+    padding: 0px 5px;
+}
+
+.t-record td:nth-child(2n+1), .t-record td:nth-child(2n) {
+ border-bottom: solid 0.01em #DFDBDB;
+}
+span.acct {
+    font-weight: bold;
+    font-size: 26px;
+}
+.t-record tr {
+    padding: 5px 0px;
+}
+
+.t-record td {
+    text-align: center;
+}
+
+.t-record span.docID {
+    text-decoration: underline; 
+    color: #0456A8;
+}
+
+.t-record span.active {
+    background-color: #0A71D83B;
+    color: #333333;
+    padding: 3px;
+}
+
+span.mand {
+    color: red;
+}
+.table-act td th {
+    font-size: 14px;
+} 
+
+button.btn1 {
     display: inline-block;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     color: #FFFFFF;
     white-space: nowrap;
@@ -58,7 +119,44 @@ thead {
     -ms-user-select: none;
     user-select: none;
     border: 0.3rem solid transparent;
-    padding: .375rem .75rem;
+    padding: .011rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .15rem;
+    background-color: #202340;
+}
+i.ar-down:before{
+    display: none;
+}
+i.ar-after:after{
+    display: contents;
+}
+
+/* -------------------------------end of account transactions #. ----------------------------------- -----------
+ */
+thead {
+
+    background-color: #E8E8E8;
+}
+.search {
+	margin: .4rem 0;
+    //20395517542
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.3rem solid transparent;
+    padding: .275rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .15rem;
