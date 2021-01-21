@@ -172,8 +172,8 @@
 							<td>039381</td>
 							<td><span class="active">Active</span></td>
 							<td>
-								<button onclick="edit()"><i class="fa fa-pencil"></i> </button>
-								<i class="fa fa-trash-o"></i> 
+								<button onclick="edit('1')"><i class="fa fa-pencil"></i> </button>
+								<button onclick="del('1')"><i class="fa fa-trash-o"></i></button> 
 								<button onclick="more()">
 									<i class="fa fa-ellipsis-v"></i>
 								</button>							
@@ -189,9 +189,9 @@
 							<td>039381</td>
 							<td><span class="active">Active</span></td>
 							<td>
-								<button onclick="edit()"><i class="fa fa-pencil"></i></button>
-								<i class="fa fa-trash-o"></i> 
-								<i class="fa fa-ellipsis-v"></i>
+								<button onclick="edit('2')"><i class="fa fa-pencil"></i></button>
+								<button onclick="del('2')"><i class="fa fa-trash-o"></i></button> 
+								<button onclick="more()"><i class="fa fa-trash-o"></i></button>
 							</td>
 						</tr>
 						<tr>
@@ -203,7 +203,11 @@
 							<td>CCJC-000040</td>
 							<td>039381</td>
 							<td><span class="active">Active</span></td>
-							<td><i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> <i class="fa fa-ellipsis-v"></i></td>
+							<td>
+								<button onclick="edit('3')"><i class="fa fa-pencil"></i></button>
+								<button onclick="del('3')"><i class="fa fa-trash-o"></i> </button>
+								<button onclick="more()"></button>
+							</td>
 						</tr>
 					</tbody>
 				</table>
