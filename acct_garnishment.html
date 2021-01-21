@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/style.css">
+
+	<title></title>
+	<style>
+		body {
+			background-color: #E8E8E8;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function recordInfo(){
+			var text = ""
+			document.getElementById("");
+		}
+
+
+		var arDown = function(){ $('ar-down').hover(function(){
+			//$(this).addClass('change').attr('data-content','Hello World');
+			$("#arDown").display("contents");
+			$(".fa-angle-down").appendTo(".spam");
+		});
+		};
+		arDown();
+		$("fa-angle-down").on("click",arDown);
+
+	 var abc=1;
+	 function edit_row(no)
+	  {
+	   if(abc==1)
+	   {
+	   document.getElementById("edit_button"+no).value="Save";
+	   
+	      
+	   var did=document.getElementById("did"+no);
+	   var cid=document.getElementById("cid"+no);
+	   var dname=document.getElementById("dname"+no);
+	   var due=document.getElementById("due"+no);
+	   var idate=document.getElementById("idate"+no);
+	   var edate=document.getElementById("edate"+no);
+	   var status=document.getElementById("status"+no);
+	   
+	      
+	   var did_data=did.innerHTML;
+	   var cid_data=cid.innerHTML;
+	   var dname_data=dname.innerHTML;
+	   var due_data=due.innerHTML;
+	   var idate_data=idate.innerHTML;
+	   var edate_data=edate.innerHTML;
+	   var status_data=status.innerHTML;
+	      
+	   did.innerHTML="<input type='text' id='did_text"+no+"' value='"+did_data+"'>";
+	   cid.innerHTML="<input type='text' id='cid_text"+no+"' value='"+cid_data+"'>";
+	   dname.innerHTML="<input type='text' id='dname_text"+no+"' value='"+dname_data+"'>";
+	   due.innerHTML="<input type='text' id='due_text"+no+"' value='"+due_data+"'>";
+	   idate.innerHTML="<input type='text' id='idate_text"+no+"' value='"+idate_data+"'>";
+	   edate.innerHTML="<input type='text' id='edate_text"+no+"' value='"+edate_data+"'>";
+	   status.innerHTML="<input type='text' id='status_text"+no+"' value='"+status_data+"'>";
+	   abc=2;
+	   }
+	   else
+	   {
+	       var did_val=document.getElementById("did_text"+no).value;
+	   var cid_val=document.getElementById("cid_text"+no).value;
+	   var dname_val=document.getElementById("dname_text"+no).value;
+	    var due_val=document.getElementById("due_text"+no).value;
+	    var idate_val=document.getElementById("idate_text"+no).value;
+	     var edate_val=document.getElementById("edate_text"+no).value;
+	    var status_val=document.getElementById("status_text"+no).value;
+	  
+	  
+	   document.getElementById("did"+no).innerHTML=did_val;
+	   document.getElementById("cid"+no).innerHTML=cid_val;
+	   document.getElementById("dname"+no).innerHTML=dname_val;
+	    document.getElementById("due"+no).innerHTML=due_val;
+	    document.getElementById("idate"+no).innerHTML=idate_val;
+	    document.getElementById("edate"+no).innerHTML=edate_val;
+	    document.getElementById("status"+no).innerHTML=status_val;
+	  
+	   document.getElementById("edit_button"+no).value="Edit";
+	  
+	   abc=1;
+	  }
+	 }
+	</script>
+	
+</head>
+<body>
+	
+	<div class="accGarnish">
+		<div>
+			<p><a href="#" class="active">Home</a> <i class="fa fa-angle-right" aria-hidden="true"></i> Garnishment <i class="fa fa-angle-right" aria-hidden="true"></i> Account Transactions</p>
+
+			<p><i class="fa fa-arrow-left fa-2x"></i> <span class="acct">Account Transactions</span></p>
+		</div>
+
+		<div class="info-act">
+			<table class="table-act">
+				<thead>
+					<tr>
+						<th>Document ID</th>
+						<th>Case ID</th>
+						<th>Debtor</th>
+						<th>Garnishee</th>
+						<th>Requestor</th>
+						<th>Attorney</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>12-GARN-025</td>
+						<td>LH-001-08</td>
+						<td>Thomas Doe</td>
+						<td>John Doe</td>
+						<td>Samuel Rickman</td>
+						<td>Rompode Horace</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div>
+			<p>Search By <span class="mand">*</span></p>
+			<form action="">
+				<select name="" id="">
+					<option value="debtor">Debtor</option>
+					<option value="all">All</option>
+				</select>
+				<input type="search" placeholder="Search" size="40">
+				<button type="submit" class="btn1">Search</button>
+
+				<table class="t-record">
+					<thead>
+						<tr>
+							<th><input type="checkbox" disabled></th>
+							<th>Document ID</th>
+							<th>Summary</th>
+							<th>Debtor</th>
+							<th>Receipt No.</th>
+							<th>Check No.</th>
+							<th>Total Amount</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td id="did"><span class="ar-down"><i class="fa fa-angle-down"  onclick="arDown()"></i></span>
+								<span class="docID">12-GARN-025</span>
+								<div class="spam"></div>
+								<div id="arDown" style="display: none;"> 
+									<table>
+										<tr>
+											<td>Hello</td>
+											<td>World</td>
+										</tr>
+									</table>
+								</div>
+								</td>
+							<td id="">20 August 2020 Paid Out</td>
+							<td>Thomas Swayer</td>
+							<td>CCJC-000040</td>
+							<td>039381</td>
+							<td><span class="active">Active</span></td>
+							<td>
+								<button onclick="edit()"><i class="fa fa-pencil"></i> </button>
+								<i class="fa fa-trash-o"></i> 
+								<button onclick="more()">
+									<i class="fa fa-ellipsis-v"></i>
+								</button>							
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td><i class="fa fa-angle-down" onclick=""></i>
+								<span class="docID">12-GARN-032</span></td>
+							<td>21  August 2020 Paid Out</td>
+							<td>Thomas Swayer</td>
+							<td>CCJC-000040</td>
+							<td>039381</td>
+							<td><span class="active">Active</span></td>
+							<td>
+								<button onclick="edit()"><i class="fa fa-pencil"></i></button>
+								<i class="fa fa-trash-o"></i> 
+								<i class="fa fa-ellipsis-v"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td><i class="fa fa-angle-down" onclick=""></i>
+								<span class="docID">12-GARN-046</span></td>
+							<td>22 August 2020 Paid Out</td>
+							<td>Thomas Swayer</td>
+							<td>CCJC-000040</td>
+							<td>039381</td>
+							<td><span class="active">Active</span></td>
+							<td><i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> <i class="fa fa-ellipsis-v"></i></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>	
+	
+	
+</body>
+</html>
